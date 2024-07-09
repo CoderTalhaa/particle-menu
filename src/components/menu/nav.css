@@ -1,0 +1,72 @@
+.navButton {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #f1f3f3;
+  overflow: hidden;
+}
+
+.navSlider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.navText {
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.navText:nth-of-type(2) {
+  position: absolute;
+  background-color: #030303;
+  top: 100%;
+}
+
+.navText:hover .perspectiveText {
+  transform: rotateX(90deg);
+}
+
+.navText:hover .navP:nth-of-type(1) {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.navText:hover .navP:nth-of-type(2) {
+  opacity: 1;
+}
+
+.perspectiveText {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+  transform-style: preserve-3d;
+}
+
+.navP {
+  transition: all 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.navP:nth-of-type(2) {
+  position: absolute;
+  transform: rotateX(-90deg) translateY(9px);
+  transform-origin: bottom center;
+  opacity: 0;
+}
+
+.bg-blur {
+  position: fixed;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 40;
+}
